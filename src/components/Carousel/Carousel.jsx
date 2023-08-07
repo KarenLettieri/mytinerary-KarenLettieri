@@ -89,11 +89,11 @@ const Carousel = () => {
   }, [slides]);
 
   return (
-    <div className="carousel-container md:max-w-xl mx-auto">
-      <h2 className="my-14 text-3xl font-bold text-center text-gray-900 md:text-4xl lg:text-5xl ">
+    <div className="carousel-container md:max-w-full mx-auto my-36 p-4">
+      <h2 className="my-14 text-3xl font-bold text-center text-gray-900 md:text-4xl lg:text-5xl">
         Popular{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
-          MyTineraries{" "}
+          MyTineraries
         </span>
       </h2>
       <div className="relative">
@@ -105,19 +105,22 @@ const Carousel = () => {
           {"<"}
         </button>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {slides.length > 0 ? (
-            slides[counter].map((city) => (
+            slides[counter].map((city, index) => (
               <div
                 key={city.name}
-                className="cursor-pointer transform transition-all ease-in-out duration-300 hover:scale-125 hover:z-10 "
+                className="cursor-pointer transform transition-all ease-in-out duration-300 hover:scale-125 hover:z-10"
               >
                 <img
-                  className="w-48 h-44 object-cover rounded-md shadow-xl cursor-pointer m-2 "
+                  className="w-60 h-44 object-cover rounded-md shadow-xl cursor-pointer m-4"
                   src={city.image}
                   alt={city.name}
                 />
-                <p className="text-center me-6 text-sm ">{city.name}</p>
+                <p className="text-center me-6 text-sm">{city.name}</p>
+                {index === 1 && (
+                  <div className="md:hidden block h-0 w-0"></div>
+                )}{" "}
               </div>
             ))
           ) : (

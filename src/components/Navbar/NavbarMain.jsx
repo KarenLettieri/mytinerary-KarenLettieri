@@ -24,9 +24,7 @@ const Navbar = () => {
         ☰
       </button>
 
-      <div
-        className={`hidden md:flex space-x-4 ${isMenuOpen ? "flex" : "hidden"}`}
-      >
+      <div className={`md:flex space-x-4 ${isMenuOpen ? "flex" : "hidden"}`}>
         <a
           href="#"
           className="text-white hover:text-gray-800 bg-tertiary hover:bg-primary text-sm font-bold py-2 px-4 rounded-full inline-block"

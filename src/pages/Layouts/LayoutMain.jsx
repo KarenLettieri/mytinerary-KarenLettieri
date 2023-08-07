@@ -3,11 +3,11 @@ import NavbarMain from "../../components/Navbar/NavbarMain";
 
 const LayoutMain = ({ children }) => {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <header className="layout-main-header w-full">
         <NavbarMain />
       </header>
-      {children}
+      <main className="flex-grow">{children}</main>
       <Footer />
     </div>
   );

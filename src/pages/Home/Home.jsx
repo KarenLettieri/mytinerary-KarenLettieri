@@ -4,16 +4,18 @@ import Hero from "../../components/Hero/Hero";
 
 const Home = () => {
   return (
-    <LayoutMain>
-      <main className="flex-grow-1 d-flex flex-column">
-        <section className="home-hero">
-          <Hero />
-        </section>
-        <section className="flex justify-center items-center min-h-screen">
-          <Carousel />
-        </section>
-      </main>
-    </LayoutMain>
+    <div style={{ overflowX: "hidden" }}>
+      <LayoutMain>
+        <main className="flex-grow flex flex-col">
+          <section className="home-hero">
+            <Hero />
+          </section>
+          <section className="flex justify-center items-center flex-grow">
+            <Carousel />
+          </section>
+        </main>
+      </LayoutMain>
+    </div>
   );
 };
 

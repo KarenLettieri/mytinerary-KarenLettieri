@@ -1,7 +1,0 @@
-.darken-others {
-  opacity: 0.5;
-}
-
-.hovering {
-  opacity: 1 !important; /* Esto asegura que la opacidad sea 1 cuando el mouse está encima */
-}
