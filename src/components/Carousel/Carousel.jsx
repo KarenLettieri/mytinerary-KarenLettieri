@@ -80,6 +80,14 @@ const Carousel = () => {
     setSlides(totalSlides);
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      next();
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [slides]);
+
   return (
     <div className="carousel-container md:max-w-xl mx-auto">
       <h2 className="my-14 text-3xl font-bold text-center text-gray-900 md:text-4xl lg:text-5xl ">
@@ -100,13 +108,16 @@ const Carousel = () => {
         <div className="grid grid-cols-2 gap-4">
           {slides.length > 0 ? (
             slides[counter].map((city) => (
-              <div key={city.name}>
+              <div
+                key={city.name}
+                className="cursor-pointer transform transition-all ease-in-out duration-300 hover:scale-125 hover:z-10 "
+              >
                 <img
-                  className="w-48 h-32 object-cover rounded-md shadow-xl"
+                  className="w-48 h-44 object-cover rounded-md shadow-xl cursor-pointer m-2 "
                   src={city.image}
                   alt={city.name}
                 />
-                <p className="text-center me-6 text-sm">{city.name}</p>
+                <p className="text-center me-6 text-sm ">{city.name}</p>
               </div>
             ))
           ) : (

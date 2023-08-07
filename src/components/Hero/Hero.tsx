@@ -6,6 +6,7 @@ const Hero = () => {
       className="py-16 px-4 md:px-8 text-white"
       style={{
         backgroundImage: `url("/images/hero2.jpg")`,
+        backgroundSize: "cover",
       }}
     >
       <div className="max-w-6xl mx-auto">
