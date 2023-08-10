@@ -4,7 +4,7 @@ import NavLinks from "../NavLinks/NavLinks";
 const links = [
   { value: "/", content: "Home", id: "1", active: true },
   { value: "/cities", content: "Cities", id: "2", active: false },
-  { value: "/contact", content: "Contact", id: "3", active: false },
+  { value: "/login", content: "Log In", id: "3", active: false },
 ];
 
 const Footer = () => {
