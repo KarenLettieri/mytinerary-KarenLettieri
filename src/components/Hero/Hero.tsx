@@ -3,12 +3,12 @@ import React from "react";
 const Hero = () => {
   return (
     <div
-      className="py-16 md:py-32 px-4 md:px-8 text-white"
+      className="py-16 mb-6 md:py-32 px-4 md:px-8 text-white"
       style={{
         backgroundImage: `url("/images/hero2.jpg")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: "60vh",
+        height: "65vh",
       }}
     >
       <div className="max-w-6xl mx-auto text-center md:text-left">
