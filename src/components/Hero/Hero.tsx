@@ -1,4 +1,5 @@
 import React from "react";
+import LiAndAnchor from "../Common/LiAndAnchor/LiAndAnchor";
 
 const Hero = () => {
   return (
@@ -17,9 +18,12 @@ const Hero = () => {
           Find your perfect trip, designed by insiders who know and love their
           cities!
         </p>
-        <button className="bg-white text-secondary font-bold px-4 md:px-6 py-2 md:py-3 rounded-full hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-          Explore Now
-        </button>
+
+        <LiAndAnchor
+          className="bg-white text-secondary font-bold px-4 md:px-6 py-2 md:py-3 rounded-full hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          value={"/cities"}
+          content={"Explore Now"}
+        />
       </div>
     </div>
   );

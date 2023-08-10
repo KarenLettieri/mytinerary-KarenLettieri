@@ -1,4 +1,11 @@
 import React from "react";
+import NavLinks from "../NavLinks/NavLinks";
+
+const links = [
+  { value: "/", content: "Home", id: "1", active: true },
+  { value: "/cities", content: "Cities", id: "2", active: false },
+  { value: "/contact", content: "Contact", id: "3", active: false },
+];
 
 const Footer = () => {
   return (
@@ -6,17 +13,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-center">
           <div className="w-full md:w-1/3 text-center mb-4 md:mb-0">
-            <nav className="flex justify-center md:justify-start gap-10">
-              <a href="#" className="hover:underline">
-                Home
-              </a>
-              <a href="#" className="hover:underline">
-                Cities
-              </a>
-              <a href="#" className="hover:underline">
-                Contact
-              </a>
-            </nav>
+            <NavLinks links={links} />
           </div>
 
           <div className="w-full md:w-1/3 text-center md:text-right">

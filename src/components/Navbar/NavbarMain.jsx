@@ -1,5 +1,5 @@
 import React from "react";
-import NavLinks from "../Common/NavLinks.jsx/NavLinks";
+import NavLinks from "../NavLinks/NavLinks";
 
 const links = [
   { value: "/", content: "Home", id: "1", active: true },
@@ -8,7 +8,11 @@ const links = [
 ];
 
 const Navbar = () => {
-  return <NavLinks links={links} />;
+  return (
+    <div className=" bg-secondary">
+      <NavLinks className=" bg-secondary" links={links} />;
+    </div>
+  );
 };
 
 export default Navbar;

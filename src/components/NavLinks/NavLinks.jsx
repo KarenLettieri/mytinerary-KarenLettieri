@@ -1,5 +1,5 @@
 import React, { useState, Fragment } from "react";
-import LiAndAnchor from "../LiAndAnchor.jsx/LiAndAnchor";
+import LiAndAnchor from "../Common/LiAndAnchor/LiAndAnchor";
 
 const NavLinks = ({ links }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,7 +8,7 @@ const NavLinks = ({ links }) => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <nav className="flex items-center justify-between w-full h-24 bg-secondary p-4">
+    <nav className="flex items-center justify-between w-full h-24 p-4">
       <div className="flex items-center">
         <img
           src="/images/logo.png"
@@ -29,11 +29,7 @@ const NavLinks = ({ links }) => {
           {links.map((link, indice) => {
             return (
               <Fragment key={indice}>
-                <LiAndAnchor
-                  value={link.value}
-                  content={link.content}
-                  active={link.active}
-                />
+                <LiAndAnchor value={link.value} content={link.content} />
               </Fragment>
             );
           })}
